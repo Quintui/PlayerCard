@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
-
-export const Nav = styled.nav`
+import {motion} from 'framer-motion';
+export const Nav = styled(motion.nav)`
     background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
     transition: 0.4s all ease-in;
     height: 80px;

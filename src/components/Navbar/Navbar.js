@@ -12,7 +12,8 @@ import {
     NavLinks, 
     NavBtn, 
     NavBtnLink
-} from './navbarElements'
+} from './navbarElements';
+import {motion} from 'framer-motion';
 
 const Navbar = ({ toggle }) => { 
 
@@ -37,7 +38,11 @@ const Navbar = ({ toggle }) => {
     return (
         <>
         <IconContext.Provider value = {{color: '#fff'}}>
-            <Nav scrollNav = {scrollNav}>
+            <Nav 
+            as = {motion.nav} 
+            scrollNav = {scrollNav}
+            initial = {{y:-80}}
+            animate = {{y: 0}} >
                 <NavbarContainer>
                     <NavLogo to = '/' onClick = {toggleHome}>
                         Quint

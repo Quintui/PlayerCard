@@ -1,6 +1,6 @@
 import styled from 'styled-components'; 
 import {MdArrowForward, MdKeyboardArrowRight} from 'react-icons/md'
-
+import { motion } from "framer-motion";
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -59,10 +59,11 @@ export const HeroContent = styled.section`
     align-items: center
 `
 
-export const HeroH1 = styled.h1`
+export const HeroH1 = styled(motion.h1)`
     color: #fff;
     font-size: 48px;
     text-align: center;
+   
 
 
     @media screen and (max-width: 800px) {
@@ -71,7 +72,9 @@ export const HeroH1 = styled.h1`
 
     @media screen and (max-width: 480px) {
         font-size: 32px
-    }
+    };
+
+   
 `
 export const HeroP = styled.p`
     margin-top: 24px;

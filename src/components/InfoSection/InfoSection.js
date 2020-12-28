@@ -51,8 +51,8 @@ const InfoSection = ({
                                     <Button 
                                  to= {section}
                                     duration = {500}
-                                    smooth = {true}
-                                    spy = {true}
+                                    smooth = 'true'
+                                    spy = 'true'
                                     exact= "true"
                                     offset = {-80}
                                     primary = {primary ? 1 : 0 }

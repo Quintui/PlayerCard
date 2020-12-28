@@ -16,8 +16,8 @@ export const homeObjOne = {
     alt: 'Gamer',
     dark: false,
     primary: true,
-    darkText: false
-
+    darkText: false,
+    section: 'services'
 };
 
 export const homeObjTwo = {
@@ -35,16 +35,17 @@ export const homeObjTwo = {
     dark: false,
     primary: false,
     darkText: true,
-    forSecond: true
+    forSecond: true,
+    section: 'services'
 }
 
 export const homeObjThree = {
-    id: 'signin',
+    id: 'signup',
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
     topLine: 'Want to play with me ? ',
-    headLine: 'Contact with me',
+    headLine: 'Contact me',
     discription: "If u want to play with me in some games just type your name/nickname and game which you want to play  ",
     buttonLabel: 'Contact',
     imgStart: true,

@@ -1,10 +1,11 @@
 import React from 'react'
+import SingIn from '../components/Singin'
 
 const SigninPage = () => {
     return (
-        <div>
-            <h1>Signin </h1>
-        </div>
+        <>
+           <SingIn/>
+        </>
     )
 }
 

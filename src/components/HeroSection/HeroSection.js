@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {
     HeroContainer,
     HeroBg,
@@ -12,6 +12,8 @@ import {
 } from './HeroElements'
 import Video from '../../videos/video.mp4'
 import {Button} from '../ButtonElements';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const HeroSection = () => {
 
@@ -21,20 +23,30 @@ const HeroSection = () => {
         setHover(!hover)
     }
 
+    useEffect(() => {
+        Aos.init({duration: 1000})
+    }, [])
     return (
         <HeroContainer>
             <HeroBg>
                 <VideoBg autoPlay muted loop src = {Video}></VideoBg>
             </HeroBg>
             <HeroContent>
-                <HeroH1>Easy peasy lemon squeezy</HeroH1>
-                <HeroP> I'm the best player in the World</HeroP>
+                <HeroH1 data-aos ="fade-right"> Welcome to my ' Player Card ' 😈  </HeroH1>
+                <HeroP data-aos ="fade-left" > You can find out more about me if you click on the button below  </HeroP>
             <HeroBtnWrapper>
-                <Button to = 'signup' 
-                primary = {true}
+                <Button 
+                data-aos = 'fade-up'
+                 to = 'about' 
+                primary = "true"
                 onMouseEnter = {onHover} 
-                onMouseLeave = {onHover}>
-                    Get Started {hover ? <ArrowForward/> : <ArrowRight/>}
+                onMouseLeave = {onHover}
+                smooth ='true'
+                duration ={1000}
+                spy = 'true'
+                exact = 'true'
+                offset = {-80}
+                > Get Started {hover ? <ArrowForward/> : <ArrowRight/>}
                 </Button>
             </HeroBtnWrapper>
 

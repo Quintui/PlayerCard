@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ButtonElements'
+import { Button2 } from '../ButtonElements'
 import { 
     InfoContainer,
     InfoWrapper,
@@ -13,11 +13,10 @@ import {
     BtnWrap,
     ImgWrap,
     Img
- } from './InfoElements';
+ } from './ContactElements';
 
 
-
-const InfoSection = ({
+const ContactSection = ({ 
     lightBg,
     id,
     imgStart,
@@ -32,12 +31,8 @@ const InfoSection = ({
     primary,
     dark,
     dark2, 
-    forSecond,
-    section
-}) => {
-  
+    forSecond}) => {
     return (
-        
         <>
             <InfoContainer lightBg ={lightBg} id ={id}>
                 <InfoWrapper>
@@ -48,18 +43,18 @@ const InfoSection = ({
                                 <Heading  lightText = {lightText}>{headLine}</Heading>
                                 <SubTitle darkText = {darkText}>{discription}</SubTitle>
                                 <BtnWrap>
-                                    <Button 
-                                 to= {section}
+                                    <Button2 
+                                 to= '/signin'
                                     duration = {500}
-                                    smooth = {true}
-                                    spy = {true}
+                                    smooth = 'true'
+                                    spy = 'true'
                                     exact= "true"
                                     offset = {-80}
                                     primary = {primary ? 1 : 0 }
                                     dark = {dark ? 1 : 0}
                                     dark2 = {dark2 ? 1 : 0}
                                     
-                                    >{buttonLabel}</Button>
+                                    >{buttonLabel}</Button2>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
@@ -76,4 +71,4 @@ const InfoSection = ({
     )
 }
 
-export default InfoSection
+export default ContactSection

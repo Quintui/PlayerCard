@@ -9,6 +9,8 @@ import {
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
 import Services from '../components/Services'
+import Footer from '../components/Footer/index'
+import ContactSection from '../components/ContactSection/ContactSection'
  
 const Home = () => {
 
@@ -26,8 +28,8 @@ const Home = () => {
            <InfoSection {...homeObjOne} />
            <InfoSection {...homeObjTwo} />
             <Services/> 
-           <InfoSection {...homeObjThree} />
-        
+           <ContactSection {...homeObjThree}/>
+            <Footer/>
         </>
     );
 };                                                                             

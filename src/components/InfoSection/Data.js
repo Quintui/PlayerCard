@@ -3,41 +3,43 @@ import Img2 from '../../images/svg-2.svg'
 import Img3 from '../../images/svg-3.svg'
 
 export const homeObjOne = {
-    id: 'about',
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Info',
-    headLine: 'About me',
-    discription: "Hello, my name is Kristian and I'm 17 years old, gamer and programmer",
-    buttonLabel: 'About Devices',
-    imgStart: true,
-    img: Img,
-    alt: 'Gamer',
-    dark: false,
-    primary: true,
-    darkText: false,
-    section: 'services'
+  id: "about",
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: "Info",
+  headLine: "About me",
+  discription:
+    "Hello, my name is Kristian and I'm 18 years old, gamer and programmer",
+  buttonLabel: "About Devices",
+  imgStart: true,
+  img: Img,
+  alt: "Gamer",
+  dark: false,
+  primary: true,
+  darkText: false,
+  section: "services",
 };
 
 export const homeObjTwo = {
-    id: 'discover',
-    lightBg: true,
-    lightText: false,
-    lightTextDesc:  false,
-    topLine: 'Info',
-    headLine: 'About me',
-    discription: "Hello, my name is Kristian and I'm 17 years old, gamer and programmer",
-    buttonLabel: 'About Devices',
-    imgStart: false,
-    img: Img2,
-    alt: 'prog1',
-    dark: false,
-    primary: false,
-    darkText: true,
-    forSecond: true,
-    section: 'services'
-}
+  id: "discover",
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: "Info",
+  headLine: "About me",
+  discription:
+    "Hello, my name is Kristian and I'm 18 years old, gamer and programmer",
+  buttonLabel: "About Devices",
+  imgStart: false,
+  img: Img2,
+  alt: "prog1",
+  dark: false,
+  primary: false,
+  darkText: true,
+  forSecond: true,
+  section: "services",
+};
 
 export const homeObjThree = {
     id: 'signup',

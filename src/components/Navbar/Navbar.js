@@ -15,91 +15,95 @@ import {
 } from './navbarElements';
 import {motion} from 'framer-motion';
 
-const Navbar = ({ toggle }) => { 
+const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
 
-    const [scrollNav, setScrollNav] = useState(false);
-
-    const changeNav = () => { 
-        if(window.scrollY >= 80) {
-            setScrollNav(true);
-        }else {
-            setScrollNav(false);
-        }
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
     }
+  };
 
-    useEffect(() => {
-        window.addEventListener('scroll',changeNav);
-    }, [])
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
-    const toggleHome = () => {
-        scroll.scrollToTop();
-    }
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
 
-    return (
-        <>
-        <IconContext.Provider value = {{color: '#fff'}}>
-            <Nav 
-            as = {motion.nav} 
-            scrollNav = {scrollNav}
-            initial = {{y:-80}}
-            animate = {{y: 0}} >
-                <NavbarContainer>
-                    <NavLogo to = '/' onClick = {toggleHome}>
-                        Quint
-                    </NavLogo>
-                    <MobileIcon onClick = {toggle}>
-                        <FaBars/>
-                    </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks 
-                            to ='about'
-                            smooth ='true'
-                            duration ={1000}
-                            spy = 'true'
-                            exact = 'true'
-                            offset = {-80}
-                           
-                            >About</NavLinks>
-                        </NavItem>  
-                        <NavItem>
-                            <NavLinks 
-                            to ='discover'
-                            smooth ='true'
-                            duration ={1000}
-                            spy = 'true'
-                            exact = 'true'
-                            offset = {-80}
-                            >Discover</NavLinks>
-                        </NavItem>
-                        <NavItem>     
-                            <NavLinks 
-                            to ='services'
-                            smooth ='true'
-                            duration ={1000}
-                            spy = 'true'
-                            exact = 'true'
-                            >Devices</NavLinks>
-                        </NavItem> 
-                        <NavItem>
-                            <NavLinks 
-                            to ='signup'
-                            smooth ='true'
-                            duration ={1000}
-                            spy = 'true'
-                            exact = 'true'
-                            >Contact</NavLinks>
-                        </NavItem>  
-                    </NavMenu>
-                    <NavBtn>
-                        <NavBtnLink to= '/signin'> Contact Form </NavBtnLink>
-                    </NavBtn>
-                </NavbarContainer>
-            </Nav>
-        </IconContext.Provider>
-        </>
-    )
-}
-// https://www.youtube.com/watch?v=Nl54MJDR2p8&t=4855s&ab_channel=BrianDesign
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <Nav
+          as={motion.nav}
+          scrollNav={scrollNav}
+          initial={{ y: -80 }}
+          animate={{ y: 0 }}
+        >
+          <NavbarContainer>
+            <NavLogo to="/" onClick={toggleHome}>
+              Quint
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks
+                  to="about"
+                  smooth="true"
+                  duration={1000}
+                  spy="true"
+                  exact="true"
+                  offset={-80}
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="discover"
+                  smooth="true"
+                  duration={1000}
+                  spy="true"
+                  exact="true"
+                  offset={-80}
+                >
+                  Discover
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="services"
+                  smooth="true"
+                  duration={1000}
+                  spy="true"
+                  exact="true"
+                >
+                  Devices
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="signup"
+                  smooth="true"
+                  duration={1000}
+                  spy="true"
+                  exact="true"
+                >
+                  Contact
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
+    </>
+  );
+};
+
 
 export default Navbar 
